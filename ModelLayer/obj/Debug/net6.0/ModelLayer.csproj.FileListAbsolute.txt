@@ -1,0 +1,12 @@
+E:\Bridge labz\BookStore\ModelLayer\bin\Debug\net6.0\ModelLayer.deps.json
+E:\Bridge labz\BookStore\ModelLayer\bin\Debug\net6.0\ModelLayer.dll
+E:\Bridge labz\BookStore\ModelLayer\bin\Debug\net6.0\ModelLayer.pdb
+E:\Bridge labz\BookStore\ModelLayer\obj\Debug\net6.0\ModelLayer.GeneratedMSBuildEditorConfig.editorconfig
+E:\Bridge labz\BookStore\ModelLayer\obj\Debug\net6.0\ModelLayer.AssemblyInfoInputs.cache
+E:\Bridge labz\BookStore\ModelLayer\obj\Debug\net6.0\ModelLayer.AssemblyInfo.cs
+E:\Bridge labz\BookStore\ModelLayer\obj\Debug\net6.0\ModelLayer.csproj.CoreCompileInputs.cache
+E:\Bridge labz\BookStore\ModelLayer\obj\Debug\net6.0\ModelLayer.sourcelink.json
+E:\Bridge labz\BookStore\ModelLayer\obj\Debug\net6.0\ModelLayer.dll
+E:\Bridge labz\BookStore\ModelLayer\obj\Debug\net6.0\refint\ModelLayer.dll
+E:\Bridge labz\BookStore\ModelLayer\obj\Debug\net6.0\ModelLayer.pdb
+E:\Bridge labz\BookStore\ModelLayer\obj\Debug\net6.0\ref\ModelLayer.dll
