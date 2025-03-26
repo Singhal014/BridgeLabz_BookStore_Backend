@@ -3,6 +3,7 @@ using Microsoft.Extensions.Configuration;
 using RepoLayer.Context;
 using RepoLayer.Entity;
 using RepoLayer.Interfaces;
+using System.Linq;
 
 namespace RepoLayer.Services
 {
@@ -26,8 +27,7 @@ namespace RepoLayer.Services
 
         public UserEntity Login(string email, string password)
         {
-            var user = _context.Users.FirstOrDefault(u => u.Email == email && u.Password == password);
-            return user;
+            return _context.Users.FirstOrDefault(u => u.Email == email);
         }
 
         public UserEntity GetUserByEmail(string email)

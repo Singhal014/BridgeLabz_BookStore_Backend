@@ -21,6 +21,7 @@ namespace RepoLayer.Entity
         [Required, MinLength(6)]
         public string Password { get; set; }
 
-        public bool IsVerified { get; set; } = false;
+        [NotMapped] 
+        public string Token { get; set; }
     }
 }

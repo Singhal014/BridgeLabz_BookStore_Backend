@@ -56,13 +56,8 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "token",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
         "Name": "model",
-        "Type": "ModelLayer.Models.NewPasswordModel",
+        "Type": "ResetPasswordModel",
         "IsRequired": true
       }
     ],

@@ -43,12 +43,11 @@ namespace BookStore.Controllers
         {
             try
             {
-                var token = _userBL.ForgotPassword(model.Email);
+                var result = _userBL.ForgotPassword(model.Email);
                 return Ok(new
                 {
                     Success = true,
-                    Message = "Password reset link sent to your email.",
-                    Token = token 
+                    Message = result 
                 });
             }
             catch (Exception ex)
@@ -62,11 +61,11 @@ namespace BookStore.Controllers
         }
 
         [HttpPost("reset-password")]
-        public IActionResult ResetPassword([FromQuery] string token, [FromBody] NewPasswordModel model)
+        public IActionResult ResetPassword([FromBody] ResetPasswordModel model)
         {
             try
             {
-                bool isReset = _userBL.ResetPassword(token, model.NewPassword);
+                bool isReset = _userBL.ResetPassword(model.Email, model.Otp, model.NewPassword);
                 if (isReset)
                 {
                     return Ok(new

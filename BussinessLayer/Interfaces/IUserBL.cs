@@ -8,6 +8,6 @@ namespace BusinessLayer.Interfaces
         UserEntity Register(RegisterModel model);
         UserEntity Login(LoginModel model);
         string ForgotPassword(string email);
-        bool ResetPassword(string token, string newPassword);
+        bool ResetPassword(string email, string otp, string newPassword);
     }
 }
