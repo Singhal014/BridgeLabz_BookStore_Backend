@@ -1,7 +1,6 @@
 ﻿using BusinessLayer.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 using ModelLayer.Models;
-using RepoLayer.Entity;
 
 namespace BookStore.Controllers
 {
@@ -19,7 +18,7 @@ namespace BookStore.Controllers
         [HttpPost("register")]
         public IActionResult Register([FromBody] RegisterModel model)
         {
-            var user = _userBL.Register(model);
+            var user = _userBL.RegisterUser(model);
             if (user == null)
             {
                 return BadRequest(new { message = "Registration failed!" });
@@ -47,7 +46,7 @@ namespace BookStore.Controllers
                 return Ok(new
                 {
                     Success = true,
-                    Message = result 
+                    Message = result
                 });
             }
             catch (Exception ex)
@@ -65,7 +64,8 @@ namespace BookStore.Controllers
         {
             try
             {
-                bool isReset = _userBL.ResetPassword(model.Email, model.Otp, model.NewPassword);
+                bool isReset = _userBL.ResetPassword(model);
+
                 if (isReset)
                 {
                     return Ok(new
@@ -74,6 +74,7 @@ namespace BookStore.Controllers
                         Message = "Password reset successfully."
                     });
                 }
+
                 return BadRequest(new
                 {
                     Success = false,

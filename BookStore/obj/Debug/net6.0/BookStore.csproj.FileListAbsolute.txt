@@ -1,3 +1,10 @@
+E:\Bridge labz\BookStore\BookStore\obj\Debug\net6.0\BookStore.csproj.AssemblyReference.cache
+E:\Bridge labz\BookStore\BookStore\obj\Debug\net6.0\BookStore.GeneratedMSBuildEditorConfig.editorconfig
+E:\Bridge labz\BookStore\BookStore\obj\Debug\net6.0\BookStore.AssemblyInfoInputs.cache
+E:\Bridge labz\BookStore\BookStore\obj\Debug\net6.0\BookStore.AssemblyInfo.cs
+E:\Bridge labz\BookStore\BookStore\obj\Debug\net6.0\BookStore.csproj.CoreCompileInputs.cache
+E:\Bridge labz\BookStore\BookStore\obj\Debug\net6.0\BookStore.MvcApplicationPartsAssemblyInfo.cache
+E:\Bridge labz\BookStore\BookStore\obj\Debug\net6.0\BookStore.sourcelink.json
 E:\Bridge labz\BookStore\BookStore\bin\Debug\net6.0\appsettings.Development.json
 E:\Bridge labz\BookStore\BookStore\bin\Debug\net6.0\appsettings.json
 E:\Bridge labz\BookStore\BookStore\bin\Debug\net6.0\BookStore.staticwebassets.endpoints.json
@@ -8,6 +15,7 @@ E:\Bridge labz\BookStore\BookStore\bin\Debug\net6.0\BookStore.dll
 E:\Bridge labz\BookStore\BookStore\bin\Debug\net6.0\BookStore.pdb
 E:\Bridge labz\BookStore\BookStore\bin\Debug\net6.0\AutoMapper.dll
 E:\Bridge labz\BookStore\BookStore\bin\Debug\net6.0\Humanizer.dll
+E:\Bridge labz\BookStore\BookStore\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 E:\Bridge labz\BookStore\BookStore\bin\Debug\net6.0\Microsoft.AspNetCore.JsonPatch.dll
 E:\Bridge labz\BookStore\BookStore\bin\Debug\net6.0\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
 E:\Bridge labz\BookStore\BookStore\bin\Debug\net6.0\Microsoft.Data.SqlClient.dll
@@ -19,6 +27,7 @@ E:\Bridge labz\BookStore\BookStore\bin\Debug\net6.0\Microsoft.EntityFrameworkCor
 E:\Bridge labz\BookStore\BookStore\bin\Debug\net6.0\Microsoft.Extensions.Caching.Memory.dll
 E:\Bridge labz\BookStore\BookStore\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.dll
 E:\Bridge labz\BookStore\BookStore\bin\Debug\net6.0\Microsoft.Identity.Client.dll
+E:\Bridge labz\BookStore\BookStore\bin\Debug\net6.0\Microsoft.IdentityModel.Abstractions.dll
 E:\Bridge labz\BookStore\BookStore\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
 E:\Bridge labz\BookStore\BookStore\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
 E:\Bridge labz\BookStore\BookStore\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
@@ -57,14 +66,6 @@ E:\Bridge labz\BookStore\BookStore\bin\Debug\net6.0\RepoLayer.dll
 E:\Bridge labz\BookStore\BookStore\bin\Debug\net6.0\BussinessLayer.pdb
 E:\Bridge labz\BookStore\BookStore\bin\Debug\net6.0\ModelLayer.pdb
 E:\Bridge labz\BookStore\BookStore\bin\Debug\net6.0\RepoLayer.pdb
-E:\Bridge labz\BookStore\BookStore\obj\Debug\net6.0\BookStore.csproj.AssemblyReference.cache
-E:\Bridge labz\BookStore\BookStore\obj\Debug\net6.0\BookStore.GeneratedMSBuildEditorConfig.editorconfig
-E:\Bridge labz\BookStore\BookStore\obj\Debug\net6.0\BookStore.AssemblyInfoInputs.cache
-E:\Bridge labz\BookStore\BookStore\obj\Debug\net6.0\BookStore.AssemblyInfo.cs
-E:\Bridge labz\BookStore\BookStore\obj\Debug\net6.0\BookStore.csproj.CoreCompileInputs.cache
-E:\Bridge labz\BookStore\BookStore\obj\Debug\net6.0\BookStore.MvcApplicationPartsAssemblyInfo.cs
-E:\Bridge labz\BookStore\BookStore\obj\Debug\net6.0\BookStore.MvcApplicationPartsAssemblyInfo.cache
-E:\Bridge labz\BookStore\BookStore\obj\Debug\net6.0\BookStore.sourcelink.json
 E:\Bridge labz\BookStore\BookStore\obj\Debug\net6.0\scopedcss\bundle\BookStore.styles.css
 E:\Bridge labz\BookStore\BookStore\obj\Debug\net6.0\staticwebassets.build.json
 E:\Bridge labz\BookStore\BookStore\obj\Debug\net6.0\staticwebassets.development.json
@@ -82,5 +83,4 @@ E:\Bridge labz\BookStore\BookStore\obj\Debug\net6.0\refint\BookStore.dll
 E:\Bridge labz\BookStore\BookStore\obj\Debug\net6.0\BookStore.pdb
 E:\Bridge labz\BookStore\BookStore\obj\Debug\net6.0\BookStore.genruntimeconfig.cache
 E:\Bridge labz\BookStore\BookStore\obj\Debug\net6.0\ref\BookStore.dll
-E:\Bridge labz\BookStore\BookStore\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
-E:\Bridge labz\BookStore\BookStore\bin\Debug\net6.0\Microsoft.IdentityModel.Abstractions.dll
+E:\Bridge labz\BookStore\BookStore\obj\Debug\net6.0\BookStore.MvcApplicationPartsAssemblyInfo.cs

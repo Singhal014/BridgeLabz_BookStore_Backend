@@ -25,19 +25,18 @@ namespace RepoLayer.Services
             return user;
         }
 
-        public UserEntity Login(string email, string password)
-        {
-            return _context.Users.FirstOrDefault(u => u.Email == email);
-        }
-
         public UserEntity GetUserByEmail(string email)
         {
             return _context.Users.FirstOrDefault(u => u.Email == email);
         }
-
-        public void UpdatePassword(UserEntity user, string newPassword)
+        public UserEntity GetUserById(int userId)
         {
-            user.Password = newPassword;
+            return _context.Users.FirstOrDefault(u => u.Id == userId);
+        }
+
+        public void UpdatePassword(UserEntity user)
+        {
+            _context.Users.Update(user);
             _context.SaveChanges();
         }
     }

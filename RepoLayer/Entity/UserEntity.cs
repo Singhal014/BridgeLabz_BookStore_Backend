@@ -21,7 +21,10 @@ namespace RepoLayer.Entity
         [Required, MinLength(6)]
         public string Password { get; set; }
 
-        [NotMapped] 
+        [Required]
+        public string Role { get; set; } = "User"; 
+
+        [NotMapped]
         public string Token { get; set; }
     }
 }

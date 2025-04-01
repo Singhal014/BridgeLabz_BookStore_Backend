@@ -1,3 +1,9 @@
+E:\Bridge labz\BookStore\BussinessLayer\obj\Debug\net6.0\BussinessLayer.csproj.AssemblyReference.cache
+E:\Bridge labz\BookStore\BussinessLayer\obj\Debug\net6.0\BussinessLayer.GeneratedMSBuildEditorConfig.editorconfig
+E:\Bridge labz\BookStore\BussinessLayer\obj\Debug\net6.0\BussinessLayer.AssemblyInfoInputs.cache
+E:\Bridge labz\BookStore\BussinessLayer\obj\Debug\net6.0\BussinessLayer.AssemblyInfo.cs
+E:\Bridge labz\BookStore\BussinessLayer\obj\Debug\net6.0\BussinessLayer.csproj.CoreCompileInputs.cache
+E:\Bridge labz\BookStore\BussinessLayer\obj\Debug\net6.0\BussinessLayer.sourcelink.json
 E:\Bridge labz\BookStore\BussinessLayer\bin\Debug\net6.0\BussinessLayer.deps.json
 E:\Bridge labz\BookStore\BussinessLayer\bin\Debug\net6.0\BussinessLayer.dll
 E:\Bridge labz\BookStore\BussinessLayer\bin\Debug\net6.0\BussinessLayer.pdb
@@ -5,12 +11,6 @@ E:\Bridge labz\BookStore\BussinessLayer\bin\Debug\net6.0\ModelLayer.dll
 E:\Bridge labz\BookStore\BussinessLayer\bin\Debug\net6.0\RepoLayer.dll
 E:\Bridge labz\BookStore\BussinessLayer\bin\Debug\net6.0\RepoLayer.pdb
 E:\Bridge labz\BookStore\BussinessLayer\bin\Debug\net6.0\ModelLayer.pdb
-E:\Bridge labz\BookStore\BussinessLayer\obj\Debug\net6.0\BussinessLayer.csproj.AssemblyReference.cache
-E:\Bridge labz\BookStore\BussinessLayer\obj\Debug\net6.0\BussinessLayer.GeneratedMSBuildEditorConfig.editorconfig
-E:\Bridge labz\BookStore\BussinessLayer\obj\Debug\net6.0\BussinessLayer.AssemblyInfoInputs.cache
-E:\Bridge labz\BookStore\BussinessLayer\obj\Debug\net6.0\BussinessLayer.AssemblyInfo.cs
-E:\Bridge labz\BookStore\BussinessLayer\obj\Debug\net6.0\BussinessLayer.csproj.CoreCompileInputs.cache
-E:\Bridge labz\BookStore\BussinessLayer\obj\Debug\net6.0\BussinessLayer.sourcelink.json
 E:\Bridge labz\BookStore\BussinessLayer\obj\Debug\net6.0\Bussines.E1038C4E.Up2Date
 E:\Bridge labz\BookStore\BussinessLayer\obj\Debug\net6.0\BussinessLayer.dll
 E:\Bridge labz\BookStore\BussinessLayer\obj\Debug\net6.0\refint\BussinessLayer.dll

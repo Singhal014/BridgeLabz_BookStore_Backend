@@ -3,48 +3,32 @@
   "WorkspaceRootPath": "E:\\Bridge labz\\BookStore\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{53456224-DDFE-47C9-A682-A2A927C19CF2}|BussinessLayer\\BussinessLayer.csproj|e:\\bridge labz\\bookstore\\bussinesslayer\\services\\userbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{53456224-DDFE-47C9-A682-A2A927C19CF2}|BussinessLayer\\BussinessLayer.csproj|solutionrelative:bussinesslayer\\services\\userbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A374AD6D-A768-4FC1-A52B-BC4BF56F9CC0}|BookStore\\BookStore.csproj|e:\\bridge labz\\bookstore\\bookstore\\controllers\\cartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A374AD6D-A768-4FC1-A52B-BC4BF56F9CC0}|BookStore\\BookStore.csproj|solutionrelative:bookstore\\controllers\\cartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D7C5C1EE-6008-4512-A309-E73CC4236F68}|RepoLayer\\RepoLayer.csproj|e:\\bridge labz\\bookstore\\repolayer\\entity\\userentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D7C5C1EE-6008-4512-A309-E73CC4236F68}|RepoLayer\\RepoLayer.csproj|solutionrelative:repolayer\\entity\\userentity.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D7C5C1EE-6008-4512-A309-E73CC4236F68}|RepoLayer\\RepoLayer.csproj|e:\\bridge labz\\bookstore\\repolayer\\interfaces\\icartrl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D7C5C1EE-6008-4512-A309-E73CC4236F68}|RepoLayer\\RepoLayer.csproj|solutionrelative:repolayer\\interfaces\\icartrl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{53456224-DDFE-47C9-A682-A2A927C19CF2}|BussinessLayer\\BussinessLayer.csproj|e:\\bridge labz\\bookstore\\bussinesslayer\\interfaces\\iuserbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{53456224-DDFE-47C9-A682-A2A927C19CF2}|BussinessLayer\\BussinessLayer.csproj|solutionrelative:bussinesslayer\\interfaces\\iuserbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D7C5C1EE-6008-4512-A309-E73CC4236F68}|RepoLayer\\RepoLayer.csproj|e:\\bridge labz\\bookstore\\repolayer\\services\\cartrl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D7C5C1EE-6008-4512-A309-E73CC4236F68}|RepoLayer\\RepoLayer.csproj|solutionrelative:repolayer\\services\\cartrl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A374AD6D-A768-4FC1-A52B-BC4BF56F9CC0}|BookStore\\BookStore.csproj|e:\\bridge labz\\bookstore\\bookstore\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A374AD6D-A768-4FC1-A52B-BC4BF56F9CC0}|BookStore\\BookStore.csproj|solutionrelative:bookstore\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{882D6816-AA84-4956-BEF2-E75B41D0DD56}|BussinessLayer\\BussinessLayer.csproj|e:\\bridge labz\\bookstore\\bussinesslayer\\services\\cartbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{882D6816-AA84-4956-BEF2-E75B41D0DD56}|BussinessLayer\\BussinessLayer.csproj|solutionrelative:bussinesslayer\\services\\cartbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A374AD6D-A768-4FC1-A52B-BC4BF56F9CC0}|BookStore\\BookStore.csproj|e:\\bridge labz\\bookstore\\bookstore\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A374AD6D-A768-4FC1-A52B-BC4BF56F9CC0}|BookStore\\BookStore.csproj|solutionrelative:bookstore\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{882D6816-AA84-4956-BEF2-E75B41D0DD56}|BussinessLayer\\BussinessLayer.csproj|e:\\bridge labz\\bookstore\\bussinesslayer\\interfaces\\icartbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{882D6816-AA84-4956-BEF2-E75B41D0DD56}|BussinessLayer\\BussinessLayer.csproj|solutionrelative:bussinesslayer\\interfaces\\icartbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D7C5C1EE-6008-4512-A309-E73CC4236F68}|RepoLayer\\RepoLayer.csproj|e:\\bridge labz\\bookstore\\repolayer\\services\\userrl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D7C5C1EE-6008-4512-A309-E73CC4236F68}|RepoLayer\\RepoLayer.csproj|solutionrelative:repolayer\\services\\userrl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{D7C5C1EE-6008-4512-A309-E73CC4236F68}|RepoLayer\\RepoLayer.csproj|e:\\bridge labz\\bookstore\\repolayer\\context\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D7C5C1EE-6008-4512-A309-E73CC4236F68}|RepoLayer\\RepoLayer.csproj|solutionrelative:repolayer\\context\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C7F41E95-96B1-41F8-942B-44D141831245}|ModelLayer\\ModelLayer.csproj|e:\\bridge labz\\bookstore\\modellayer\\models\\responsemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C7F41E95-96B1-41F8-942B-44D141831245}|ModelLayer\\ModelLayer.csproj|solutionrelative:modellayer\\models\\responsemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C7F41E95-96B1-41F8-942B-44D141831245}|ModelLayer\\ModelLayer.csproj|e:\\bridge labz\\bookstore\\modellayer\\models\\resetpasswordmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C7F41E95-96B1-41F8-942B-44D141831245}|ModelLayer\\ModelLayer.csproj|solutionrelative:modellayer\\models\\resetpasswordmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{53456224-DDFE-47C9-A682-A2A927C19CF2}|BussinessLayer\\BussinessLayer.csproj|e:\\bridge labz\\bookstore\\bussinesslayer\\services\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{53456224-DDFE-47C9-A682-A2A927C19CF2}|BussinessLayer\\BussinessLayer.csproj|solutionrelative:bussinesslayer\\services\\emailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{53456224-DDFE-47C9-A682-A2A927C19CF2}|BussinessLayer\\BussinessLayer.csproj|e:\\bridge labz\\bookstore\\bussinesslayer\\interfaces\\iemailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{53456224-DDFE-47C9-A682-A2A927C19CF2}|BussinessLayer\\BussinessLayer.csproj|solutionrelative:bussinesslayer\\interfaces\\iemailservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D7C5C1EE-6008-4512-A309-E73CC4236F68}|RepoLayer\\RepoLayer.csproj|e:\\bridge labz\\bookstore\\repolayer\\interfaces\\iuserrl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D7C5C1EE-6008-4512-A309-E73CC4236F68}|RepoLayer\\RepoLayer.csproj|solutionrelative:repolayer\\interfaces\\iuserrl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{882D6816-AA84-4956-BEF2-E75B41D0DD56}|BussinessLayer\\BussinessLayer.csproj|e:\\bridge labz\\bookstore\\bussinesslayer\\services\\userbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{882D6816-AA84-4956-BEF2-E75B41D0DD56}|BussinessLayer\\BussinessLayer.csproj|solutionrelative:bussinesslayer\\services\\userbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -54,7 +38,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -66,143 +50,93 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "UserEntity.cs",
-              "DocumentMoniker": "E:\\Bridge labz\\BookStore\\RepoLayer\\Entity\\UserEntity.cs",
-              "RelativeDocumentMoniker": "RepoLayer\\Entity\\UserEntity.cs",
-              "ToolTip": "E:\\Bridge labz\\BookStore\\RepoLayer\\Entity\\UserEntity.cs",
-              "RelativeToolTip": "RepoLayer\\Entity\\UserEntity.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAUAAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "ICartBL.cs",
+              "DocumentMoniker": "E:\\Bridge labz\\BookStore\\BussinessLayer\\Interfaces\\ICartBL.cs",
+              "RelativeDocumentMoniker": "BussinessLayer\\Interfaces\\ICartBL.cs",
+              "ToolTip": "E:\\Bridge labz\\BookStore\\BussinessLayer\\Interfaces\\ICartBL.cs",
+              "RelativeToolTip": "BussinessLayer\\Interfaces\\ICartBL.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-26T06:20:17.34Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "ResetPasswordModel.cs",
-              "DocumentMoniker": "E:\\Bridge labz\\BookStore\\ModelLayer\\Models\\ResetPasswordModel.cs",
-              "RelativeDocumentMoniker": "ModelLayer\\Models\\ResetPasswordModel.cs",
-              "ToolTip": "E:\\Bridge labz\\BookStore\\ModelLayer\\Models\\ResetPasswordModel.cs",
-              "RelativeToolTip": "ModelLayer\\Models\\ResetPasswordModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-26T05:23:16.971Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "IUserBL.cs",
-              "DocumentMoniker": "E:\\Bridge labz\\BookStore\\BussinessLayer\\Interfaces\\IUserBL.cs",
-              "RelativeDocumentMoniker": "BussinessLayer\\Interfaces\\IUserBL.cs",
-              "ToolTip": "E:\\Bridge labz\\BookStore\\BussinessLayer\\Interfaces\\IUserBL.cs",
-              "RelativeToolTip": "BussinessLayer\\Interfaces\\IUserBL.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-26T05:11:23.055Z",
+              "WhenOpened": "2025-04-01T04:52:08.519Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "UserBL.cs",
-              "DocumentMoniker": "E:\\Bridge labz\\BookStore\\BussinessLayer\\Services\\UserBL.cs",
-              "RelativeDocumentMoniker": "BussinessLayer\\Services\\UserBL.cs",
-              "ToolTip": "E:\\Bridge labz\\BookStore\\BussinessLayer\\Services\\UserBL.cs",
-              "RelativeToolTip": "BussinessLayer\\Services\\UserBL.cs",
-              "ViewState": "AgIAAHsAAAAAAAAAAAAmwIkAAAA3AAAAAAAAAA==",
+              "Title": "CartController.cs",
+              "DocumentMoniker": "E:\\Bridge labz\\BookStore\\BookStore\\Controllers\\CartController.cs",
+              "RelativeDocumentMoniker": "BookStore\\Controllers\\CartController.cs",
+              "ToolTip": "E:\\Bridge labz\\BookStore\\BookStore\\Controllers\\CartController.cs",
+              "RelativeToolTip": "BookStore\\Controllers\\CartController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-25T04:45:09.581Z",
+              "WhenOpened": "2025-04-01T04:43:52.272Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "UserRL.cs",
-              "DocumentMoniker": "E:\\Bridge labz\\BookStore\\RepoLayer\\Services\\UserRL.cs",
-              "RelativeDocumentMoniker": "RepoLayer\\Services\\UserRL.cs",
-              "ToolTip": "E:\\Bridge labz\\BookStore\\RepoLayer\\Services\\UserRL.cs",
-              "RelativeToolTip": "RepoLayer\\Services\\UserRL.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACIAAAAMAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "ICartRL.cs",
+              "DocumentMoniker": "E:\\Bridge labz\\BookStore\\RepoLayer\\Interfaces\\ICartRL.cs",
+              "RelativeDocumentMoniker": "RepoLayer\\Interfaces\\ICartRL.cs",
+              "ToolTip": "E:\\Bridge labz\\BookStore\\RepoLayer\\Interfaces\\ICartRL.cs",
+              "RelativeToolTip": "RepoLayer\\Interfaces\\ICartRL.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-25T04:46:08.78Z",
+              "WhenOpened": "2025-03-31T18:56:41.012Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "UserController.cs",
-              "DocumentMoniker": "E:\\Bridge labz\\BookStore\\BookStore\\Controllers\\UserController.cs",
-              "RelativeDocumentMoniker": "BookStore\\Controllers\\UserController.cs",
-              "ToolTip": "E:\\Bridge labz\\BookStore\\BookStore\\Controllers\\UserController.cs",
-              "RelativeToolTip": "BookStore\\Controllers\\UserController.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAYAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-25T04:44:26.181Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "IUserRL.cs",
-              "DocumentMoniker": "E:\\Bridge labz\\BookStore\\RepoLayer\\Interfaces\\IUserRL.cs",
-              "RelativeDocumentMoniker": "RepoLayer\\Interfaces\\IUserRL.cs",
-              "ToolTip": "E:\\Bridge labz\\BookStore\\RepoLayer\\Interfaces\\IUserRL.cs",
-              "RelativeToolTip": "RepoLayer\\Interfaces\\IUserRL.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-25T09:37:10.613Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "IEmailService.cs",
-              "DocumentMoniker": "E:\\Bridge labz\\BookStore\\BussinessLayer\\Interfaces\\IEmailService.cs",
-              "RelativeDocumentMoniker": "BussinessLayer\\Interfaces\\IEmailService.cs",
-              "ToolTip": "E:\\Bridge labz\\BookStore\\BussinessLayer\\Interfaces\\IEmailService.cs",
-              "RelativeToolTip": "BussinessLayer\\Interfaces\\IEmailService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-25T09:37:20.897Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "Program.cs",
-              "DocumentMoniker": "E:\\Bridge labz\\BookStore\\BookStore\\Program.cs",
-              "RelativeDocumentMoniker": "BookStore\\Program.cs",
-              "ToolTip": "E:\\Bridge labz\\BookStore\\BookStore\\Program.cs",
-              "RelativeToolTip": "BookStore\\Program.cs",
-              "ViewState": "AgIAACEAAAAAAAAAAAAAAA8AAAAjAAAAAAAAAA==",
+              "Title": "CartBL.cs",
+              "DocumentMoniker": "E:\\Bridge labz\\BookStore\\BussinessLayer\\Services\\CartBL.cs",
+              "RelativeDocumentMoniker": "BussinessLayer\\Services\\CartBL.cs",
+              "ToolTip": "E:\\Bridge labz\\BookStore\\BussinessLayer\\Services\\CartBL.cs",
+              "RelativeToolTip": "BussinessLayer\\Services\\CartBL.cs",
+              "ViewState": "AgIAAFQAAAAAAAAAAAAYwGoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-25T09:37:29.866Z",
+              "WhenOpened": "2025-03-31T18:49:18.64Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "ResponseModel.cs",
-              "DocumentMoniker": "E:\\Bridge labz\\BookStore\\ModelLayer\\Models\\ResponseModel.cs",
-              "RelativeDocumentMoniker": "ModelLayer\\Models\\ResponseModel.cs",
-              "ToolTip": "E:\\Bridge labz\\BookStore\\ModelLayer\\Models\\ResponseModel.cs",
-              "RelativeToolTip": "ModelLayer\\Models\\ResponseModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Title": "UserBL.cs",
+              "DocumentMoniker": "E:\\Bridge labz\\BookStore\\BussinessLayer\\Services\\UserBL.cs",
+              "RelativeDocumentMoniker": "BussinessLayer\\Services\\UserBL.cs",
+              "ToolTip": "E:\\Bridge labz\\BookStore\\BussinessLayer\\Services\\UserBL.cs",
+              "RelativeToolTip": "BussinessLayer\\Services\\UserBL.cs",
+              "ViewState": "AgIAAJ4AAAAAAAAAAADwv68AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-26T05:54:23.942Z",
+              "WhenOpened": "2025-03-31T18:41:22.538Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CartRL.cs",
+              "DocumentMoniker": "E:\\Bridge labz\\BookStore\\RepoLayer\\Services\\CartRL.cs",
+              "RelativeDocumentMoniker": "RepoLayer\\Services\\CartRL.cs",
+              "ToolTip": "E:\\Bridge labz\\BookStore\\RepoLayer\\Services\\CartRL.cs",
+              "RelativeToolTip": "RepoLayer\\Services\\CartRL.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-31T09:25:40.818Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "EmailService.cs",
-              "DocumentMoniker": "E:\\Bridge labz\\BookStore\\BussinessLayer\\Services\\EmailService.cs",
-              "RelativeDocumentMoniker": "BussinessLayer\\Services\\EmailService.cs",
-              "ToolTip": "E:\\Bridge labz\\BookStore\\BussinessLayer\\Services\\EmailService.cs",
-              "RelativeToolTip": "BussinessLayer\\Services\\EmailService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 5,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "E:\\Bridge labz\\BookStore\\RepoLayer\\Context\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "RepoLayer\\Context\\ApplicationDbContext.cs",
+              "ToolTip": "E:\\Bridge labz\\BookStore\\RepoLayer\\Context\\ApplicationDbContext.cs",
+              "RelativeToolTip": "RepoLayer\\Context\\ApplicationDbContext.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAA5wDYAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-25T04:45:32.335Z"
+              "WhenOpened": "2025-03-29T18:54:55.508Z",
+              "EditorCaption": ""
             }
           ]
         }
