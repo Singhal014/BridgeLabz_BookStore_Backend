@@ -1,118 +1,176 @@
-﻿using BusinessLayer.Interfaces;
-using Microsoft.Extensions.Configuration;
-using Microsoft.IdentityModel.Tokens;
+﻿using BusinessLayer.Helpers;
+using BusinessLayer.Interfaces;
 using ModelLayer.Models;
 using RepoLayer.Entity;
 using RepoLayer.Interfaces;
 using System;
-using System.IdentityModel.Tokens.Jwt;
-using System.Security.Claims;
-using System.Security.Cryptography;
-using System.Text;
-using System.Collections.Generic;
+using System.Threading.Tasks;
+using Microsoft.Extensions.Logging;
 
 namespace BusinessLayer.Services
 {
     public class UserBL : IUserBL
     {
         private readonly IUserRL _userRL;
-        private readonly IConfiguration _configuration;
         private readonly IEmailService _emailService;
-        private static Dictionary<string, (string otp, DateTime expiry)> _otpStorage = new Dictionary<string, (string, DateTime)>();
+        private readonly IPasswordHasherBL _passwordHasherBL;
+        private readonly IOtpServiceBL _otpServiceBL;
+        private readonly ITokenServiceBL _tokenServiceBL;
+        private readonly ILogger<UserBL> _logger;
 
-        public UserBL(IUserRL userRL, IConfiguration configuration, IEmailService emailService)
+        public UserBL(
+            IUserRL userRL,
+            IEmailService emailService,
+            IPasswordHasherBL passwordHasherBL,
+            IOtpServiceBL otpServiceBL,
+            ITokenServiceBL tokenServiceBL,
+            ILogger<UserBL> logger)
         {
             _userRL = userRL;
-            _configuration = configuration;
             _emailService = emailService;
+            _passwordHasherBL = passwordHasherBL;
+            _otpServiceBL = otpServiceBL;
+            _tokenServiceBL = tokenServiceBL;
+            _logger = logger;
         }
 
-        public UserModel RegisterUser(RegisterModel model)
+        public async Task<UserModel> RegisterUserAsync(RegisterModel model)
         {
-            return Register(model, "User");
+            _logger.LogInformation("Registering user: {Email}", model.Email);
+            return await RegisterAsync(model, "User");
         }
 
-        public UserModel RegisterAdmin(RegisterModel model)
+        public async Task<UserModel> RegisterAdminAsync(RegisterModel model)
         {
-            return Register(model, "Admin");
+            _logger.LogInformation("Registering admin: {Email}", model.Email);
+            return await RegisterAsync(model, "Admin");
         }
 
-        private UserModel Register(RegisterModel model, string role)
+        private async Task<UserModel> RegisterAsync(RegisterModel model, string role)
         {
-            var hashedPassword = HashPassword(model.Password);
-
-            var userEntity = new UserEntity
+            try
             {
-                FirstName = model.FirstName,
-                LastName = model.LastName,
-                Email = model.Email,
-                Password = hashedPassword,
-                Role = role
-            };
+                _logger.LogInformation("Processing registration for {Role}: {Email}", role, model.Email);
+                var hashedPassword = await _passwordHasherBL.HashPasswordAsync(model.Password);
 
-            var createdUser = _userRL.Register(userEntity);
-            return MapUserEntityToModel(createdUser);
-        }
+                var userEntity = new UserEntity
+                {
+                    FirstName = model.FirstName,
+                    LastName = model.LastName,
+                    Email = model.Email,
+                    Password = hashedPassword,
+                    Role = role
+                };
 
-        public UserModel Login(LoginModel model)
-        {
-            var user = _userRL.GetUserByEmail(model.Email);
-            if (user == null || !VerifyPassword(model.Password, user.Password))
-                return null;
-
-            user.Token = GenerateJwtToken(user);
-
-            return new UserModel
-            {
-                FirstName = user.FirstName,
-                LastName = user.LastName,
-                Email = user.Email,
-                Token = user.Token
-            };
-        }
-
-        public string ForgotPassword(string email)
-        {
-            var user = _userRL.GetUserByEmail(email);
-            if (user == null) throw new InvalidOperationException("User not found.");
-
-            string otp = GenerateOtp();
-            _otpStorage[email] = (otp, DateTime.Now.AddMinutes(10));
-
-            string emailBody = $"Your password reset OTP: {otp}. This OTP is valid for 10 minutes.";
-            _emailService.SendEmail(email, "Password Reset OTP", emailBody);
-
-            return "OTP sent to your email.";
-        }
-
-        public bool ResetPassword(ResetPasswordModel model)
-        {
-            if (string.IsNullOrWhiteSpace(model.NewPassword) || model.NewPassword.Length < 6)
-                throw new InvalidOperationException("Password must be at least 6 characters");
-
-            if (!_otpStorage.TryGetValue(model.Email, out var otpData))
-                throw new InvalidOperationException("OTP not found or expired.");
-
-            if (otpData.otp != model.Otp)
-                throw new InvalidOperationException("Invalid OTP.");
-
-            if (DateTime.Now > otpData.expiry)
-            {
-                _otpStorage.Remove(model.Email);
-                throw new InvalidOperationException("OTP has expired.");
+                var createdUser = await _userRL.RegisterAsync(userEntity);
+                _logger.LogInformation("{Role} registered successfully: {Email}", role, model.Email);
+                return MapUserEntityToModel(createdUser);
             }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Registration failed for {Role}: {Email}", role, model.Email);
+                throw;
+            }
+        }
 
-            var hashedPassword = HashPassword(model.NewPassword);
+        public async Task<UserModel> LoginAsync(LoginModel model)
+        {
+            try
+            {
+                _logger.LogInformation("Login attempt: {Email}", model.Email);
+                var user = await _userRL.GetUserByEmailAsync(model.Email);
 
-            var user = _userRL.GetUserByEmail(model.Email);
-            if (user == null)
-                throw new InvalidOperationException("User not found.");
+                if (user == null || !await _passwordHasherBL.VerifyPasswordAsync(model.Password, user.Password))
+                {
+                    _logger.LogWarning("Login failed: Invalid credentials for {Email}", model.Email);
+                    return null;
+                }
 
-            user.Password = hashedPassword;
-            _userRL.UpdatePassword(user);
-            _otpStorage.Remove(model.Email);
+                user.Token = await _tokenServiceBL.GenerateJwtTokenAsync(user);
+                _logger.LogInformation("Login successful: {Email}", model.Email);
 
-            return true;
+                return new UserModel
+                {
+                    FirstName = user.FirstName,
+                    LastName = user.LastName,
+                    Email = user.Email,
+                    Token = user.Token
+                };
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Login failed: {Email}", model.Email);
+                throw;
+            }
+        }
+
+        public async Task<string> ForgotPasswordAsync(string email)
+        {
+            try
+            {
+                _logger.LogInformation("Forgot password request: {Email}", email);
+                var user = await _userRL.GetUserByEmailAsync(email);
+
+                if (user == null)
+                {
+                    _logger.LogWarning("Forgot password failed: User not found {Email}", email);
+                    throw new InvalidOperationException("User not found.");
+                }
+
+                string otp = await _otpServiceBL.GenerateOtpAsync();
+                await _otpServiceBL.StoreOtpAsync(email, otp);
+
+                string emailBody = $"Your password reset OTP: {otp}. This OTP is valid for 10 minutes.";
+                await _emailService.SendEmailAsync(email, "Password Reset OTP", emailBody);
+
+                _logger.LogInformation("OTP sent to {Email}", email);
+                return "OTP sent to your email.";
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Forgot password process failed: {Email}", email);
+                throw;
+            }
+        }
+
+        public async Task<bool> ResetPasswordAsync(ResetPasswordModel model)
+        {
+            try
+            {
+                _logger.LogInformation("Resetting password: {Email}", model.Email);
+
+                if (string.IsNullOrWhiteSpace(model.NewPassword) || model.NewPassword.Length < 6)
+                {
+                    _logger.LogWarning("Password reset failed: Weak password for {Email}", model.Email);
+                    throw new InvalidOperationException("Password must be at least 6 characters");
+                }
+
+                if (!await _otpServiceBL.ValidateOtpAsync(model.Email, model.Otp))
+                {
+                    _logger.LogWarning("Password reset failed: Invalid OTP for {Email}", model.Email);
+                    throw new InvalidOperationException("Invalid or expired OTP.");
+                }
+
+                var hashedPassword = await _passwordHasherBL.HashPasswordAsync(model.NewPassword);
+
+                var user = await _userRL.GetUserByEmailAsync(model.Email);
+                if (user == null)
+                {
+                    _logger.LogWarning("Password reset failed: User not found {Email}", model.Email);
+                    throw new InvalidOperationException("User not found.");
+                }
+
+                user.Password = hashedPassword;
+                await _userRL.UpdatePasswordAsync(user);
+                _logger.LogInformation("Password reset successful: {Email}", model.Email);
+
+                return true;
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Failed to reset password: {Email}", model.Email);
+                throw;
+            }
         }
 
         private UserModel MapUserEntityToModel(UserEntity user)
@@ -124,52 +182,6 @@ namespace BusinessLayer.Services
                 Email = user.Email,
                 Token = user.Token
             };
-        }
-
-        private string GenerateOtp()
-        {
-            Random random = new Random();
-            return random.Next(100000, 999999).ToString();
-        }
-
-        private string HashPassword(string password)
-        {
-            using (var sha256 = SHA256.Create())
-            {
-                var hashedBytes = sha256.ComputeHash(Encoding.UTF8.GetBytes(password));
-                return BitConverter.ToString(hashedBytes).Replace("-", "").ToLower();
-            }
-        }
-
-        private bool VerifyPassword(string inputPassword, string storedHash)
-        {
-            var hashOfInput = HashPassword(inputPassword);
-            return string.Equals(hashOfInput, storedHash, StringComparison.OrdinalIgnoreCase);
-        }
-
-        private string GenerateJwtToken(UserEntity user)
-        {
-            var jwtSettings = _configuration.GetSection("JwtSettings");
-
-            var claims = new[]
-            {
-                new Claim("Id", user.Id.ToString()),
-                new Claim("Email", user.Email),
-                new Claim("FirstName", user.FirstName),
-                new Claim("LastName", user.LastName),
-                new Claim(ClaimTypes.Role, user.Role)
-            };
-
-            var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtSettings["Key"]));
-            var token = new JwtSecurityToken(
-                issuer: jwtSettings["Issuer"],
-                audience: jwtSettings["Audience"],
-                claims: claims,
-                expires: DateTime.UtcNow.AddMinutes(Convert.ToDouble(jwtSettings["ExpirationMinutes"])),
-                signingCredentials: new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256)
-            );
-
-            return new JwtSecurityTokenHandler().WriteToken(token);
         }
     }
 }

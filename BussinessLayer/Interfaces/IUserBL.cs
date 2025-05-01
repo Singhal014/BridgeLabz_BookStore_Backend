@@ -1,13 +1,14 @@
 ﻿using ModelLayer.Models;
+using System.Threading.Tasks;
 
 namespace BusinessLayer.Interfaces
 {
     public interface IUserBL
     {
-        UserModel RegisterUser(RegisterModel model);  
-        UserModel RegisterAdmin(RegisterModel model); 
-        UserModel Login(LoginModel model);
-        string ForgotPassword(string email);
-        bool ResetPassword(ResetPasswordModel model);
+        Task<UserModel> RegisterUserAsync(RegisterModel model);
+        Task<UserModel> RegisterAdminAsync(RegisterModel model);
+        Task<UserModel> LoginAsync(LoginModel model);
+        Task<string> ForgotPasswordAsync(string email);
+        Task<bool> ResetPasswordAsync(ResetPasswordModel model);
     }
 }

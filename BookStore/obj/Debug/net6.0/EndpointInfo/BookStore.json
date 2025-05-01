@@ -5,11 +5,116 @@
     "version": "v1"
   },
   "paths": {
-    "/api/Admin/register-admin": {
+    "/Address": {
+      "post": {
+        "tags": [
+          "Address"
+        ],
+        "summary": "Adds a new address for the authenticated user",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddressModel"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddressModel"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddressModel"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "Address"
+        ],
+        "summary": "Retrieves all addresses for the authenticated user",
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Address"
+        ],
+        "summary": "Updates an existing address for the authenticated user",
+        "parameters": [
+          {
+            "name": "addressId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddressModel"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddressModel"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/AddressModel"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Address"
+        ],
+        "summary": "Deletes a specific address for the authenticated user",
+        "parameters": [
+          {
+            "name": "addressId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/Admin": {
       "post": {
         "tags": [
           "Admin"
         ],
+        "summary": "Registers a new Admin in the system.",
         "requestBody": {
           "content": {
             "application/json": {
@@ -36,11 +141,12 @@
         }
       }
     },
-    "/api/Book/add": {
+    "/Book": {
       "post": {
         "tags": [
           "Book"
         ],
+        "summary": "Adds a new book to the system (Admin only)",
         "requestBody": {
           "content": {
             "application/json": {
@@ -65,13 +171,12 @@
             "description": "Success"
           }
         }
-      }
-    },
-    "/api/Book/getAll": {
+      },
       "get": {
         "tags": [
           "Book"
         ],
+        "summary": "Retrieves all available books in the system",
         "responses": {
           "200": {
             "description": "Success"
@@ -79,11 +184,12 @@
         }
       }
     },
-    "/api/Book/get/{id}": {
+    "/Book/{id}": {
       "get": {
         "tags": [
           "Book"
         ],
+        "summary": "Gets details of a specific book by its ID",
         "parameters": [
           {
             "name": "id",
@@ -100,13 +206,12 @@
             "description": "Success"
           }
         }
-      }
-    },
-    "/api/Book/update/{id}": {
+      },
       "put": {
         "tags": [
           "Book"
         ],
+        "summary": "Updates an existing book's information (Admin only)",
         "parameters": [
           {
             "name": "id",
@@ -142,13 +247,12 @@
             "description": "Success"
           }
         }
-      }
-    },
-    "/api/Book/delete/{id}": {
+      },
       "delete": {
         "tags": [
           "Book"
         ],
+        "summary": "Deletes a book from the system (Admin only)",
         "parameters": [
           {
             "name": "id",
@@ -167,11 +271,12 @@
         }
       }
     },
-    "/api/Cart/add": {
+    "/Cart": {
       "post": {
         "tags": [
           "Cart"
         ],
+        "summary": "Adds a book to the user's cart with a specified quantity.",
         "requestBody": {
           "content": {
             "application/json": {
@@ -196,30 +301,27 @@
             "description": "Success"
           }
         }
-      }
-    },
-    "/api/Cart/items": {
+      },
       "get": {
         "tags": [
           "Cart"
         ],
+        "summary": "Retrieves all cart items for the authenticated user.",
         "responses": {
           "200": {
             "description": "Success"
           }
         }
-      }
-    },
-    "/api/Cart/update/{bookId}/{quantity}": {
+      },
       "put": {
         "tags": [
           "Cart"
         ],
+        "summary": "Updates the quantity of a specific book in the user's cart.",
         "parameters": [
           {
             "name": "bookId",
-            "in": "path",
-            "required": true,
+            "in": "query",
             "schema": {
               "type": "integer",
               "format": "int32"
@@ -227,8 +329,7 @@
           },
           {
             "name": "quantity",
-            "in": "path",
-            "required": true,
+            "in": "query",
             "schema": {
               "type": "integer",
               "format": "int32"
@@ -240,16 +341,99 @@
             "description": "Success"
           }
         }
-      }
-    },
-    "/api/Cart/remove/{bookId}": {
+      },
       "delete": {
         "tags": [
           "Cart"
         ],
+        "summary": "Removes a book from the user's cart.",
         "parameters": [
           {
             "name": "bookId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/Order/place": {
+      "post": {
+        "tags": [
+          "Order"
+        ],
+        "parameters": [
+          {
+            "name": "cartId",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          {
+            "name": "paymentMethod",
+            "in": "query",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/Order": {
+      "get": {
+        "tags": [
+          "Order"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    },
+    "/Order/{orderId}": {
+      "get": {
+        "tags": [
+          "Order"
+        ],
+        "parameters": [
+          {
+            "name": "orderId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer",
+              "format": "int32"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Order"
+        ],
+        "parameters": [
+          {
+            "name": "orderId",
             "in": "path",
             "required": true,
             "schema": {
@@ -265,23 +449,12 @@
         }
       }
     },
-    "/api/Cart/place-order": {
-      "post": {
-        "tags": [
-          "Cart"
-        ],
-        "responses": {
-          "200": {
-            "description": "Success"
-          }
-        }
-      }
-    },
-    "/api/User/register": {
+    "/User": {
       "post": {
         "tags": [
           "User"
         ],
+        "summary": "Registers a new user in the system.",
         "requestBody": {
           "content": {
             "application/json": {
@@ -308,11 +481,12 @@
         }
       }
     },
-    "/api/User/login": {
+    "/User/login": {
       "post": {
         "tags": [
           "User"
         ],
+        "summary": "Logs in an existing user and admin.",
         "requestBody": {
           "content": {
             "application/json": {
@@ -339,11 +513,12 @@
         }
       }
     },
-    "/api/User/forgot-password": {
+    "/User/forgot-password": {
       "post": {
         "tags": [
           "User"
         ],
+        "summary": "Sends an OTP to the user's email for password reset.",
         "requestBody": {
           "content": {
             "application/json": {
@@ -370,11 +545,12 @@
         }
       }
     },
-    "/api/User/reset-password": {
+    "/User/reset-password": {
       "post": {
         "tags": [
           "User"
         ],
+        "summary": "Resets the user's password using an OTP, email, and new password.",
         "requestBody": {
           "content": {
             "application/json": {
@@ -401,11 +577,12 @@
         }
       }
     },
-    "/api/Wishlist/add": {
+    "/Wishlist": {
       "post": {
         "tags": [
           "Wishlist"
         ],
+        "summary": "Adds a book to the user's wishlist with a specified quantity.",
         "requestBody": {
           "content": {
             "application/json": {
@@ -430,13 +607,12 @@
             "description": "Success"
           }
         }
-      }
-    },
-    "/api/Wishlist/items": {
+      },
       "get": {
         "tags": [
           "Wishlist"
         ],
+        "summary": "Retrieves all wishlist items for the authenticated user.",
         "responses": {
           "200": {
             "description": "Success"
@@ -444,16 +620,16 @@
         }
       }
     },
-    "/api/Wishlist/remove/{wishlistId}": {
+    "/Wishlist/remove": {
       "delete": {
         "tags": [
           "Wishlist"
         ],
+        "summary": "Removes a book from the wishlist using its wishlistId.",
         "parameters": [
           {
             "name": "wishlistId",
-            "in": "path",
-            "required": true,
+            "in": "query",
             "schema": {
               "type": "integer",
               "format": "int32"
@@ -467,16 +643,16 @@
         }
       }
     },
-    "/api/Wishlist/move-to-cart/{wishlistId}": {
+    "/Wishlist/move-to-cart": {
       "post": {
         "tags": [
           "Wishlist"
         ],
+        "summary": "Moves a book from the wishlist to the cart for the authenticated user.",
         "parameters": [
           {
             "name": "wishlistId",
-            "in": "path",
-            "required": true,
+            "in": "query",
             "schema": {
               "type": "integer",
               "format": "int32"
@@ -493,6 +669,40 @@
   },
   "components": {
     "schemas": {
+      "AddressModel": {
+        "type": "object",
+        "properties": {
+          "firstName": {
+            "type": "string",
+            "nullable": true
+          },
+          "lastName": {
+            "type": "string",
+            "nullable": true
+          },
+          "phoneNo": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "pinCode": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "city": {
+            "type": "string",
+            "nullable": true
+          },
+          "state": {
+            "type": "string",
+            "nullable": true
+          },
+          "address": {
+            "type": "string",
+            "nullable": true
+          }
+        },
+        "additionalProperties": false
+      },
       "BookRequestModel": {
         "required": [
           "authorName",
@@ -644,17 +854,16 @@
       }
     },
     "securitySchemes": {
-      "JWT": {
-        "type": "apiKey",
-        "description": "JWT Authorization {token})",
-        "name": "Authorization",
-        "in": "header"
+      "Bearer": {
+        "type": "http",
+        "description": "Enter 'Bearer <your-token>' in the Authorization header",
+        "scheme": "bearer"
       }
     }
   },
   "security": [
     {
-      "JWT": [ ]
+      "Bearer": [ ]
     }
   ]
 }

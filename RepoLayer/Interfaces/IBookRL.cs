@@ -1,13 +1,15 @@
 ﻿using RepoLayer.Entity;
+using System.Collections.Generic;
+using System.Threading.Tasks;
 
-namespace RepoLayer.Interface
+namespace RepoLayer.Interfaces
 {
     public interface IBookRL
     {
-        BookEntity AddBook(BookEntity book);
-        IEnumerable<BookEntity> GetAllBooks();
-        BookEntity GetBookById(int id);
-        BookEntity UpdateBook(int id, BookEntity updatedBook);
-        bool DeleteBook(int id);
+        Task<BookEntity> AddBookAsync(BookEntity book);
+        Task<IEnumerable<BookEntity>> GetAllBooksAsync();
+        Task<BookEntity> GetBookByIdAsync(int id);
+        Task<BookEntity> UpdateBookAsync(int id, BookEntity updatedBook);
+        Task<bool> DeleteBookAsync(int id);
     }
 }

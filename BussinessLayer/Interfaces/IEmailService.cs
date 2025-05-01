@@ -1,7 +1,9 @@
-﻿namespace BusinessLayer.Interfaces
+﻿using System.Threading.Tasks;
+
+namespace BusinessLayer.Interfaces
 {
     public interface IEmailService
     {
-        void SendEmail(string toEmail, string subject, string body);
+        Task SendEmailAsync(string toEmail, string subject, string body);
     }
 }

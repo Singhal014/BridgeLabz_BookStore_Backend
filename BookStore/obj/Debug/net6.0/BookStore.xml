@@ -1,0 +1,118 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>BookStore</name>
+    </assembly>
+    <members>
+        <member name="M:BookStore.Controllers.AddressController.AddAddressAsync(ModelLayer.Models.AddressModel)">
+            <summary>
+            Adds a new address for the authenticated user
+            </summary>
+        </member>
+        <member name="M:BookStore.Controllers.AddressController.GetAllAddressesAsync">
+            <summary>
+            Retrieves all addresses for the authenticated user
+            </summary>
+        </member>
+        <member name="M:BookStore.Controllers.AddressController.UpdateAddressAsync(System.Int32,ModelLayer.Models.AddressModel)">
+            <summary>
+            Updates an existing address for the authenticated user
+            </summary>
+        </member>
+        <member name="M:BookStore.Controllers.AddressController.DeleteAddressAsync(System.Int32)">
+            <summary>
+            Deletes a specific address for the authenticated user
+            </summary>
+        </member>
+        <member name="M:BookStore.Controllers.AdminController.RegisterAdmin(ModelLayer.Models.RegisterModel)">
+            <summary>
+            Registers a new Admin in the system.
+            </summary>
+        </member>
+        <member name="M:BookStore.Controllers.BookController.AddBook(ModelLayer.Models.BookRequestModel)">
+            <summary>
+            Adds a new book to the system (Admin only)
+            </summary>
+        </member>
+        <member name="M:BookStore.Controllers.BookController.GetAllBooks">
+            <summary>
+            Retrieves all available books in the system
+            </summary>
+        </member>
+        <member name="M:BookStore.Controllers.BookController.GetBookById(System.Int32)">
+            <summary>
+            Gets details of a specific book by its ID
+            </summary>
+        </member>
+        <member name="M:BookStore.Controllers.BookController.UpdateBook(System.Int32,ModelLayer.Models.BookRequestModel)">
+            <summary>
+            Updates an existing book's information (Admin only)
+            </summary>
+        </member>
+        <member name="M:BookStore.Controllers.BookController.DeleteBook(System.Int32)">
+            <summary>
+            Deletes a book from the system (Admin only)
+            </summary>
+        </member>
+        <member name="M:BookStore.Controllers.CartController.AddToCart(ModelLayer.Models.CartModel)">
+            <summary>
+            Adds a book to the user's cart with a specified quantity.
+            </summary>
+        </member>
+        <member name="M:BookStore.Controllers.CartController.GetCartItems">
+            <summary>
+            Retrieves all cart items for the authenticated user.
+            </summary>
+        </member>
+        <member name="M:BookStore.Controllers.CartController.UpdateCart(System.Int32,System.Int32)">
+            <summary>
+            Updates the quantity of a specific book in the user's cart.
+            </summary>
+        </member>
+        <member name="M:BookStore.Controllers.CartController.RemoveBookFromCart(System.Int32)">
+            <summary>
+            Removes a book from the user's cart.
+            </summary>
+        </member>
+        <member name="M:BookStore.Controllers.UserController.Register(ModelLayer.Models.RegisterModel)">
+            <summary>
+            Registers a new user in the system.
+            </summary>
+        </member>
+        <member name="M:BookStore.Controllers.UserController.Login(ModelLayer.Models.LoginModel)">
+            <summary>
+            Logs in an existing user and admin.
+            </summary>
+        </member>
+        <member name="M:BookStore.Controllers.UserController.ForgotPassword(ForgotPasswordModel)">
+            <summary>
+            Sends an OTP to the user's email for password reset.
+            </summary>
+        </member>
+        <member name="M:BookStore.Controllers.UserController.ResetPassword(ResetPasswordModel)">
+            <summary>
+            Resets the user's password using an OTP, email, and new password.
+            </summary>
+        </member>
+        <member name="M:BookStore.Controllers.WishlistController.AddToWishlist(ModelLayer.Models.WishlistModel)">
+            <summary>
+            Adds a book to the user's wishlist with a specified quantity.
+            </summary>
+        </member>
+        <member name="M:BookStore.Controllers.WishlistController.GetWishlistItems">
+            <summary>
+            Retrieves all wishlist items for the authenticated user.
+            </summary>
+        </member>
+        <member name="M:BookStore.Controllers.WishlistController.RemoveFromWishlist(System.Int32)">
+            <summary>
+             Removes a book from the wishlist using its wishlistId.
+            </summary>
+        </member>
+        <member name="M:BookStore.Controllers.WishlistController.MoveToCart(System.Int32)">
+            <summary>
+            Moves a book from the wishlist to the cart for the authenticated user.
+            </summary>
+        </member>
+    </members>
+</doc>

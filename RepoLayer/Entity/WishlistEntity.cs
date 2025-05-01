@@ -1,6 +1,5 @@
-﻿using System;
+﻿using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
 
 namespace RepoLayer.Entity
 {
@@ -8,6 +7,7 @@ namespace RepoLayer.Entity
     {
         [Key]
         public int WishlistId { get; set; }
+
         public int UserId { get; set; }
         public int BookId { get; set; }
         public int Quantity { get; set; }

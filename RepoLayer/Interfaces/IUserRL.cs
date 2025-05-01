@@ -1,12 +1,13 @@
 ﻿using RepoLayer.Entity;
+using System.Threading.Tasks;
 
 namespace RepoLayer.Interfaces
 {
     public interface IUserRL
     {
-        UserEntity Register(UserEntity user);
-        UserEntity GetUserByEmail(string email);
-        void UpdatePassword(UserEntity user);
-        UserEntity GetUserById(int userId);
+        Task<UserEntity> RegisterAsync(UserEntity user);
+        Task<UserEntity> GetUserByEmailAsync(string email);
+        Task UpdatePasswordAsync(UserEntity user);
+        Task<UserEntity> GetUserByIdAsync(int userId);
     }
 }

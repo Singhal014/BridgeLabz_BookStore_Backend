@@ -1,15 +1,15 @@
 ﻿using ModelLayer.Models;
-using RepoLayer.Entity;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 
 namespace BusinessLayer.Interfaces
 {
     public interface IBookBL
     {
-        BookModel AddBook(BookRequestModel bookModel, int userId);
-        IEnumerable<BookModel> GetAllBooks();
-        BookModel GetBookById(int id);
-        BookModel UpdateBook(int id, BookRequestModel updatedBookModel, int userId);
-        bool DeleteBook(int id, int userId);
+        Task<BookModel> AddBookAsync(BookRequestModel bookModel, int userId);
+        Task<IEnumerable<BookModel>> GetAllBooksAsync();
+        Task<BookModel> GetBookByIdAsync(int id);
+        Task<BookModel> UpdateBookAsync(int id, BookRequestModel updatedBookModel, int userId);
+        Task<bool> DeleteBookAsync(int id, int userId);
     }
 }

@@ -1,5 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
+﻿using System.ComponentModel.DataAnnotations.Schema;
+using System.ComponentModel.DataAnnotations;
 
 namespace RepoLayer.Entity
 {
@@ -22,9 +22,15 @@ namespace RepoLayer.Entity
         public string Password { get; set; }
 
         [Required]
-        public string Role { get; set; } = "User"; 
+        public string Role { get; set; } = "User";
 
         [NotMapped]
         public string Token { get; set; }
+
+        // Navigation properties
+        public virtual ICollection<BookEntity> Books { get; set; }
+        public virtual ICollection<CartEntity> Carts { get; set; }
+        public virtual ICollection<WishlistEntity> Wishlists { get; set; }
+        public virtual ICollection<AddressEntity> Addresses { get; set; }
     }
 }
